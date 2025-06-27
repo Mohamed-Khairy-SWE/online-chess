@@ -6,7 +6,7 @@
 class Rook : public Piece {
 public:
     Rook(Color color, Position position)
-        : Piece(color, Type::QUEEN, position) {}
+        : Piece(color, Type::ROOK, position) {}
 
     std::vector<Position> availableMoves(const std::vector<std::vector<Piece*>>& board) const override {
         std::vector<Position> moves;
@@ -16,7 +16,7 @@ public:
         const int dy[] = {0, 0, -1, 1};
 
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 4; i++) {
             int newRow = position.first;
             int newCol = position.second;
 
