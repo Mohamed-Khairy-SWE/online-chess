@@ -7,6 +7,9 @@
 #include <string>
 #include <memory>
 
+ // Boar Type -> define the game board or a chunk of it
+ using Board = std::vector<std::vector<std::unique_ptr<Piece>>>;
+
 // Express cell row and column
 using Position = std::pair<int, int>;
 
@@ -69,8 +72,7 @@ public:
     // Return Game state
     GameState getGameState();
 private:
-    // Boar Type -> define the game board or a chunk of it
-    using Board = std::vector<std::vector<std::unique_ptr<Piece>>>;
+   
     Board _board;
 
     // Current Player
